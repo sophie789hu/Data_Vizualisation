@@ -222,7 +222,7 @@ VerifyUnicity(df_dc, df_marvel)  # 476 different characters share the same page_
 df_dc, df_marvel = MaintainUniqueness(df_dc, df_marvel)
 df_Comics = AppendDf(df_dc, df_marvel)
 df_missingValue = MissingValue(df_Comics)
-missingValue_fig = PlotMissingValue(df_missingValue)
+missingValue_fig, missingValue_ax = PlotMissingValue(df_missingValue)
 df_Comics = CleanMissingValue(df_Comics)  # Df_Comics has been cut by 0,04% from 22192 rows to 22291 rows.
 
 
