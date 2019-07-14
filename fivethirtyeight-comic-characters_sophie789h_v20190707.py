@@ -229,6 +229,7 @@ df_Comics = CleanMissingValue(df_Comics)  # Df_Comics has been cut by 0,04% from
 # EXPLORATORY DATA ANALYSIS
 
 def setAx(axs):
+    """ Set plot axes"""
     for ax in axs:
         ax.set(xlabel=None, ylabel=None)
         ax.tick_params(labelsize=7)
@@ -264,7 +265,7 @@ plt.show()
 
 
 # II - Representation of the chracters by role
-# Set the figure - FIND TTITLE AND SUBTITLE
+# Set the figure
 roleGender_fig, (roleGender_axe1, roleGender_axe2, roleGender_axe3) = plt.subplots(1, 3, figsize=(10, 3))
 roleGender_fig.text(s="While distribution of role per gender is quite proportionated ", x=0.09, y=0.94, fontsize=15)
 roleGender_fig.suptitle('It seems like Comic writers may perceive female characters as more likely to be a good person than male characters', x=0.5, y=0.92, fontsize=10)
@@ -300,7 +301,7 @@ plt.show()
 
 
 # III - Analysis focused on the top 50 most popular Comics characters
-# The female chracter with the highest number of appearances if Susan Storm ranks #13...
+# Set the figure - FIND TTITLE AND SUBTITLE
 top50_df_fig = plt.figure(figsize=(10, 6))
 top50_df_spec = gridspec.GridSpec(ncols=3, nrows=3, figure=top50_df_fig)
 top50_df_ax1 = top50_df_fig.add_subplot(top50_df_spec[0, :2])
